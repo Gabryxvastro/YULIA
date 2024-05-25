@@ -1,0 +1,32 @@
+import discord
+from discord.ext import commands
+import os, random
+
+import requests
+
+
+intents = discord.Intents.default()
+intents.message_content - True
+
+
+bot = commands.Bot(command_prefix="$", intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f"Hai fatto accesso come {bot.user}")
+
+@bot.command()
+async def meme(ctx):    
+    animal = random.choice("meme1", "meme2", "meme3", "meme4", "meme5", "meme6"("foto casa"))
+    with open(animal, "rb") as f:
+        picture = discord.File(f)
+    await ctx.send(file=picture)
+
+@bot.command()
+async def baldi(ctx):
+    baldi = random.choice("baldi1", "baldi2", "baldi3", "baldi4", "baldi5", "baldi6"("foto casa"))
+    with open(baldi, "rb") as f:
+        ricture = discord.File(f)
+    await ctx.send(file=ricture)
+
+bot.run("TOKEN") 
