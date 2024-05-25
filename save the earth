@@ -39,7 +39,13 @@ async def carta(ctx):
 async def come_risparmiare_energia(ctx):
     await ctx.send(f"Spegnete le luci inutilizzate")
 
+@bot.command()
+async def come_posso_riutilizzare_i_materiali_non_riciclabili(ctx):
+    await ctx.send(f"I materiali non riciclabili li potresti utilizzare come lavoretti artigianali per esempio una cesta o una statuina")
 
+@bot.command()
+async def come_salvare_il_pianeta(ctx):
+    await ctx.send(f"Bhe... potresti cominciare con piccoli gesti come per esempio il riciclaggio, la raccolta differenziato, il risparmio enrgetico e usare energie rinnovabili")
     
 
 bot.run("TOKEN")
